@@ -4,5 +4,5 @@ development:
   database: ChatSpace
   pool: 5
   username: root
-  password: aqua
+  password: 
   socket: /tmp/mysql.sock
