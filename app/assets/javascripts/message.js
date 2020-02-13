@@ -50,18 +50,18 @@ $(function(){
     return html;
   };
   
- $('#new_message').on('submit', function(e){
- e.preventDefault();
- var formData = new FormData(this);
- var url = $(this).attr('action')
- $.ajax({
-   url: url,
-   type: "POST",
-   data: formData,
-   dataType: 'json',
-   processData: false,
-   contentType: false
- })
+  $('#new_message').on('submit', function(e){
+  e.preventDefault();
+  var formData = new FormData(this);
+  var url = $(this).attr('action')
+  $.ajax({
+    url: url,
+    type: "POST",
+    data: formData,
+    dataType: 'json',
+    processData: false,
+    contentType: false
+  })
   .done(function(data){
     var html = buildHTML(data);
     $('.chat-main__message-list').append(html);   	
@@ -71,8 +71,8 @@ $(function(){
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
-}); 
-})
+  }); 
+  });
 var reloadMessages = function() {
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
   last_message_id = $('.message:last').data("message-id");
@@ -84,7 +84,7 @@ var reloadMessages = function() {
     dataType: 'json',
     //dataオプションでリクエストに値を含める
     data: {id: last_message_id}
-  })
+  })  
   .done(function(messages) {
     console.log(messages.length);
     if (messages.length !== 0) {
