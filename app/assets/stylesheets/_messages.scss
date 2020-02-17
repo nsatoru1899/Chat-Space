@@ -50,6 +50,9 @@
     overflow-y: scroll;
     overflow-x: hidden;
     .group-element{     
+      a{
+        text-decoration: none;
+      }
       &__name{
         color: $mainWhiteColor;
         margin-top: 20px;
