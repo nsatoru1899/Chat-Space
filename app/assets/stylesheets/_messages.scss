@@ -49,14 +49,15 @@
     height: calc(100vh - 100px);
     overflow-y: scroll;
     overflow-x: hidden;
-    .group-element{
-      text-decoration: none;
+    .group-element{     
       &__name{
+        color: $mainWhiteColor;
         margin-top: 20px;
         margin-bottom: 5px;
         font-size: 15px;
       }
       &__message{
+        color: $mainWhiteColor;
         font-size: 11px;
         margin-bottom: 40px;
       }        
